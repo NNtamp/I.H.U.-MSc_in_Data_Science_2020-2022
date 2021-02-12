@@ -1,0 +1,33 @@
+body {
+  background: #f0f2f5;
+}
+
+.header {
+  display: flex;
+}
+
+.header h1 {
+  display: inline-block;
+  color: #fff;
+  font-weight: bold;
+}
+
+.layout-container {
+  height: 100vh;
+}
+
+.inner-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 24px;
+}
+
+.demo-container {
+  padding: 24px;
+}
+
+footer {
+  padding: 0 24px 24px;
+  text-align: center;
+}
