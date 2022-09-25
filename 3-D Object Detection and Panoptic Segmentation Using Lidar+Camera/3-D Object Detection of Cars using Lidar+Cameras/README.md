@@ -1,4 +1,4 @@
-# Sparse Fuse Dense: Towards High Quality 3D Detection with Depth Completion (CVPR 2022, Oral)
+# High Quality 3D Detection of cars using SFD model
 <p align="center"> <img src='docs/sfd_framework.png' align="center" height="300px"> </p>
 
 This is an inference implementation of [**Sparse Fuse Dense: Towards High Quality 3D Detection with Depth Completion**](https://arxiv.org/abs/2203.09780), built on [`Voxel-R-CNN`](https://github.com/djiajunustc/Voxel-R-CNN) and [`OpenPCDet`](https://github.com/open-mmlab/OpenPCDet). The original repo leaves [here](https://github.com/LittlePey/SFD).
