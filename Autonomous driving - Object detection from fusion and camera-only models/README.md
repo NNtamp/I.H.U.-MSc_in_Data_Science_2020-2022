@@ -1,7 +1,26 @@
-# 3-D Object Detection and Panoptic Segmentation Using Lidar+Camera
+# Autonomous driving - Object detection from fusion and camera-only models
 
-The general structure of the current repo is the following:
+In this repo we are trying to compare 2 state of the art models in terms of object detection capabilities, trying to identify cars. The whole experiment takes place for the needs of an autonomous driving agent. The final target is to identify if a fusion model using lidar and cameras has more detection capabilities from a camera-only method. For the needs of the experiment we tried the following 2 models:
+- [Sparse Fuse Dense moler (aka SFD)](https://arxiv.org/abs/2203.09780) as the fusion model 
+- [Detectron2](https://paperswithcode.com/lib/detectron2) as the camera-only model 
 
-1. Use the "3-D Object Detection of Cars using Lidar+Cameras" repo for performing the 3-D object detection of cars using the SFD model
-2. Use the "Panoptic Segmntation on Coco dataset" repo to perform a panoptic segmentation on the same images as above using the Detectron2 model
-3. Use the "Combined visualization of SFD+Detectron2 models" repo to combine the output results in a single image
+The experimentation results could be seen below:
+ webpage and click "Convert".
+
+Learn how to:
+
+Convert Excel to Markdown
+Convert HTML to Markdown
+Convert Google Sheets to Markdown
+Convert LibreOffice Calc to Markdown
+Format a Markdown table
+Generate a Markdown table
+© 2019-22 John Franey. Colours from ayu.
+
+Convert Spreadsheet to Markdown
+ Outer pipes  Cell padding 
+No sorting
+|            | No\_params                                                                                                             | Dataset | N\_of\_samples | Evaluation criteria for general AP                                                                                                                                                                                                                                                                                                                   | AP0.70 for bboxes | Evaluation criteria for AP pes object size                                                                                                                                                                                                                                                                                                                                                                                                                                      | APs or Hard | APm or Moderate | APl or Easy |
+| ---------- | ---------------------------------------------------------------------------------------------------------------------- | ------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | --------------- | ----------- |
+| SFD        | ±47M(trainable)                   ±20K(non-trainable)                                                                  | KITTY   | 3769           | We evaluate object detection performance using the PASCAL criteria and object detection and orientation estimation performance using the measure discussed in our CVPR 2012 publication. For cars we require an overlap of 70%. Detections in don't care areas or detections which are smaller than the minimum size do not count as false positive. | 94.61             | Easy: Min. bounding box height: 40 Px, Max. occlusion level: Fully visible, Max. truncation: 15 %                                                                                                    Moderate: Min. bounding box height: 25 Px, Max. occlusion level: Partly occluded, Max. truncation: 30 %                                                               Hard: Min. bounding box height: 25 Px, Max. occlusion level: Difficult to see, Max. truncation: 50 % | 89.95       | 96.03           | 97.86       |
+| Detectron2 | ±103M(trainable)     ±430K(non-trainable)<br>\*using transferred knowledge only the last part of the model was trained | KITTY   | 92             | Coco evaluator returns AP0.5 and AP0.75, so the AP0.70 will be found using linear interpolation                                                                                                                                                                                                                                                      | 81.95             | Apsmall: AP for small objects: area < 322^2 Apmedium: AP for medium objects: 322^2 < area < 962^2                                           Aplarge: AP for large objects: area > 962^2                                                                                                                                                                                                                                                                                         | 43.9        | 79.75           | 95.87       |
