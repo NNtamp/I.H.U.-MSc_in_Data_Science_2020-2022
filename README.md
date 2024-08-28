@@ -1,0 +1,3 @@
+# MSc Data Science Implementations and Assignments
+
+This repository contains the implementations,assignments and Master Thesis completed during the MSc in Data Science program at the International Hellenic University from 2020 to 2022. The coursework spans various data science topics, including machine learning, data analysis, statistics, and more, showcasing the practical applications and skills developed throughout the program.
