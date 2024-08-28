@@ -1,5 +1,7 @@
 # Autonomous driving - Object detection from fusion and camera-only models
 
+This is the implementation of MSc thesis (https://repository.ihu.edu.gr/xmlui/handle/11544/30191) under MSc in Data Science in IHU.
+
 In this repo we are trying to compare 2 state of the art models in terms of object detection capabilities, trying to identify cars as part of [Thesis during the IHU MSc in Data Science](https://repository.ihu.edu.gr/xmlui/handle/11544/30191). The whole experiment takes place for the needs of an autonomous driving agent. The final target is to identify if a fusion model using lidar and cameras has more detection capabilities from a camera-only method. For the needs of the experiment we tried the following 2 models:
 - [Sparse Fuse Dense model (aka SFD)](https://arxiv.org/abs/2203.09780) as the fusion model 
 - [Detectron2](https://paperswithcode.com/lib/detectron2) as the camera-only model 
